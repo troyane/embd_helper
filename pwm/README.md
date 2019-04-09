@@ -18,9 +18,25 @@ Change it to fit your needs.
 
 ## Run script
 
-You need to be root to run it (or run it via sudo):
+You need to be root to run it (or run it via `sudo`):
 
 ```
 sudo ./pwmviasysfs.sh
 ```
 
+### Expected output
+
+```
+# ./pwmsysfs.sh 
+There is already exported pwm 0
+   at /sys/class/pwm/pwmchip0/pwm0
+Will unexport it.
+Export the pwm 0
+   at /sys/class/pwm/pwmchip0/pwm0
+Setup pwm:
+    period = 10000
+    duty cycle = 6000
+Done. See debug here (tail /sys/kernel/debug/pwm):
+platform/1c21400.pwm, 1 PWM device
+ pwm-0   (sysfs               ): requested enabled period: 10000 ns duty: 6000 ns polarity: inverse
+```
