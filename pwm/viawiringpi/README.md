@@ -6,8 +6,19 @@ This script allows you to use [PWM](https://en.wikipedia.org/wiki/Pulse-width_mo
 
 ## Customize script
 
-Change it to fit your needs.
+There is header in `pwmviawiringpi.sh`. Change it to fit your needs.
+```
+# --- Apply your changes if needed ---
+PWM_PIN=1
+PWM_LOW=200   # (0-1023 is supported)
+PWM_HIGH=800  # (0-1023 is supported)
+SLEEP_TIME=2s # specify amount of time between different pwm signals
+```
 
 ## Run script
 
+You need to be root to run it (or run it via sudo):
 
+```
+sudo ./pwmviawiringpi.sh
+```
